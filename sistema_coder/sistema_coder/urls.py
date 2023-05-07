@@ -23,11 +23,11 @@ from sistema_coder.views import saludar, saludar_con_fecha, saludar_a_usuario,sa
 
 
 urlpatterns = [
-    path('',inicio),
+    path('',inicio,name="ppal"),
     path('admin/', admin.site.urls),
-    path('saludo/', saludar),
-    path('saludo-fecha/', saludar_con_fecha),
-    path('saludo-usuario/<nombre>', saludar_a_usuario),
+    path('saludo/', saludar,name="saludar"),
+    path('saludo-fecha/', saludar_con_fecha,name="saludar-fecha"),
+    path('saludo-usuario/<nombre>', saludar_a_usuario,name="saludar-usuario"),
     path('saludo-html/',saludar_con_html),
     path('estudios/',include ('control_estudios.urls')), 
     
